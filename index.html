@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Primary Meta Tags -->
+    <title>Fortress Arena</title>
+
+    <link rel="icon" type="image/png" href="./favicon_new.ico" />
+    <!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./css/ScrollTrigger.css" />
+    <script type="text/javascript" src="./js/ScrollTrigger.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#header").load("./page/header.html");
+        $("#sidebar").load("./page/sidebar.html");
+      });
+    </script>
+  </head>
+
+  <body id="index">
+    <aside id="sidebar" class="sidebar"></aside>
+
+    <header id="header"></header>
+
+    <nav class="snb hide" id="navbarCollapse">
+      <ol>
+        <li><a href="#Introduction">Introduction</a></li>
+        <li><a href="#Tank_NFT">Tank NFT</a></li>
+        <li><a href="#Rental_Shop">Rental Shop</a></li>
+        <li><a href="#Repair_Shop">Repair Shop</a></li>
+        <li><a href="#R&D_Center">R&D Center</a></li>
+        <li><a href="#Play_Mode">Play Mode</a></li>
+        <li><a href="#Team">Team</a></li>
+      </ol>
+    </nav>
+
+    <section id="home" class="section1">
+      <div class="content">
+        <div id="game_movie">
+          <video autoplay loop muted>
+            <source src="./img/intro.mp4" type="video/mp4" />
+            <img src="./img/intro.jpg" alt="" />
+          </video>
+        </div>
+        <div class="textarea">
+          <p class="animate__animated animate__slideInUp" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+            Fortress Arena is a game where you battle enemies<br />
+            with Fortress NFTs and TANK tokens on the Fortress Planet
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="Introduction" class="section2">
+      <div class="content">
+        <div class="textarea">
+          <h2 data-scroll="toggle(.scaleDownIn, .scaleDownOut)">Introduction</h2>
+          <p data-scroll="toggle(.fromBottomIn, .fromBottomOut)" class="marginB_10">
+            Fortress Arena is a turn-based artillery game using Fortress tank NFTs.<br />
+            Tanks with different attributes fire a cannon and destroy the opponents' tanks, thereby winning the game. Players will earn points for winning the game.
+          </p>
+          <p data-scroll="toggle(.fromBottomIn, .fromBottomOut)">Game points can be exchanged for TANK tokens, so players can simultaneously enjoy the game and earn rewards.</p>
+        </div>
+
+        <div class="imgarea">
+          <div>
+            <div id="srolling" data-scroll="toggle(.scaleDownIn, .scaleDownOut)"></div>
+            <div id="srolling_img" style="display: none">
+              <div><img src="./img/intro.jpg" alt="" /></div>
+              <div><img src="./img/game_img1.jpg" alt="" /></div>
+              <div><img src="./img/game_img3.jpg" alt="" /></div>
+              <div><img src="./img/game_img4.jpg" alt="" /></div>
+              <div><img src="./img/game_img5.jpg" alt="" /></div>
+            </div>
+            ﻿
+          </div>
+        </div>
+      </div>
+
+      <span class="bg_obj bg_obj7">
+        <img src="./img/prefab_windblow_l_g_01.png" class="animate__animated animate__zoomIn" data-scroll="toggle(.scaleDownIn, .scaleDownOut2)" alt="" />
+      </span>
+
+      <span class="bg_obj bg_obj8">
+        <img src="./img/blazer_1.gif" alt="" />
+      </span>
+    </section>
+
+    <section id="Tank_NFT" class="section3">
+      <div class="content">
+        <div class="textarea">
+          <h2 data-scroll="toggle(.scaleDownIn, .scaleDownOut)">Tank NFT</h2>
+          <p data-scroll="toggle(.fromBottomIn, .fromBottomOut)" class="marginB_10">
+            Fortress Tank NFT is used as a tank character to defeat enemy tanks in the game.<br />
+            Each tank NFT has five grades,<br />
+            and each grade determines the number of sockets to put parts in or the tank's stats.
+          </p>
+          <p data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+            Each tank also has its own characteristics such as the race and appearance of the tank,<br />
+            and depending on the other characteristics of the enemy tank,<br />
+            the attack or defense becomes stronger or weaker.
+          </p>
+        </div>
+
+        <div class="imgarea">
+          <ul>
+            <li><img src="./img/10101155.gif" alt="" /></li>
+            <li><img src="./img/10101146.gif" alt="" /></li>
+            <li><img src="./img/10101131.gif" alt="" /></li>
+            <li><img src="./img/10101124.gif" alt="" /></li>
+            <li><img src="./img/10101113.gif" alt="" /></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="Rental_Shop" class="section4">
+      <div class="content">
+        <div class="imgarea" data-scroll="toggle(.scaleDownIn, .scaleDownOut)">
+          <img src="../img/intro.jpg" alt="" />
+        </div>
+
+        <div class="textarea">
+          <h2 data-scroll="toggle(.scaleDownIn, .scaleDownOut)">Rental Shop</h2>
+          <p data-scroll="toggle(.fromBottomIn, .fromBottomOut)" class="marginB_10">
+            Players must have three tank NFTs to play.<br />
+            For players who don't own a three tank NFTs, there is a rental shop on Fortress Planet.<br />
+            You can play the game by borrowing up to three tank NFTs from the in-game rental shop, and the profit from winning is divided into percentages based on the tank attributes.
+          </p>
+          <p data-scroll="toggle(.fromBottomIn, .fromBottomOut)">Players who own more than three tank NFTs can also rent their tank NFTs through the rental shop and share the rewards.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="Repair_Shop" class="section5">
+      <div class="bg_obj_wrap">
+        <div>
+          <span class="bg_obj bg_obj9">
+            <img src="./img/sec5_dropship.gif" class="animate__animated animate__zoomIn" data-scroll="toggle(.scaleDownIn, .scaleDownOut)" alt="" />
+          </span>
+
+          <span class="bg_obj bg_obj10">
+            <img src="./img/sec5_overcharger.gif" alt="" />
+          </span>
+          <span class="bg_obj bg_obj12">
+            <img src="./img/sec5_ironhammer_g_02.gif" class="animate__animated animate__zoomIn" data-scroll="toggle(.scaleDownIn, .scaleDownOut)" alt="" />
+          </span>
+          <span class="bg_obj bg_obj11">
+            <img src="./img/sharkmissile_l_34.gif" class="animate__animated animate__zoomIn" data-scroll="toggle(.scaleDownIn, .scaleDownOut)" alt="" />
+          </span>
+          <span class="bg_obj bg_obj14">
+            <img src="./img/sec5_steelcarrot_w.gif" alt="" />
+          </span>
+          <span class="bg_obj bg_obj13">
+            <img src="./img/sec5_minelander_g_01.gif" alt="" />
+          </span>
+        </div>
+
+        <div>
+          <span class="bg_obj bg_obj16">
+            <img src="./img/sharkmissile_n.gif" alt="" />
+          </span>
+          <span class="bg_obj bg_obj15">
+            <img src="./img/sec5_ironhammer_n.gif" class="animate__animated animate__zoomIn" data-scroll="toggle(.scaleDownIn, .scaleDownOut)" alt="" />
+          </span>
+          <span class="bg_obj bg_obj17">
+            <img src="./img/sec5_overcharger-idle0.gif" alt="" />
+          </span>
+          <span class="bg_obj bg_obj19">
+            <img src="./img/skeleton-idle0_02.gif" class="animate__animated animate__zoomIn" data-scroll="toggle(.scaleDownIn, .scaleDownOut)" alt="" />
+          </span>
+          <span class="bg_obj bg_obj18">
+            <img src="./img/sec5_rainbowshell_g_01.gif" alt="" />
+          </span>
+          <span class="bg_obj bg_obj20">
+            <img src="./img/sec5_catapult_n_c.gif" alt="" />
+          </span>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="textarea">
+          <h2 data-scroll="toggle(.scaleDownIn, .scaleDownOut)">Repair Shop</h2>
+          <p data-scroll="toggle(.fromBottomIn, .fromBottomOut)" class="marginB_10">
+            Tanks that have undergone battles will lose a bit of their durability,<br />
+            and tanks can increase their durability by using in-game points in the repair shop.
+          </p>
+          <p data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+            The repair shop is one of the most visited stores for players,<br />
+            as tanks cannot go into battle when their durability reaches 0 and tanks<br />
+            with worn out durability cannot be sold.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="R&D_Center" class="section6">
+      <div class="content">
+        <h2 data-scroll="toggle(.scaleDownIn, .scaleDownOut)">R&D Center</h2>
+        <div>
+          <img src="./img/Fortress_combinesysteam.png" alt="" data-scroll="toggle(.fromLeftIn, .fromLeftOut)" />
+          <div class="textarea textarea_right" data-scroll="toggle(.fromRightIn, .fromRightOut)">
+            <h4>Combination System</h4>
+            <p class="marginB_10">If a player has 2 tank NFTs, they can pay TANK tokens and combine them to produce a new tank NFT.</p>
+            <p>When combining, the main tank and support tank are decided, and only the attributes of the main tank are passed to the newly produced tank NFT with a probability</p>
+          </div>
+        </div>
+
+        <div id="Mutation">
+          <div class="textarea textarea_left" data-scroll="toggle(.fromLeftIn, .fromLeftOut)">
+            <h4>Mutation</h4>
+            <p class="marginB_10">Combination has a small chance of creating a mutant tank.</p>
+            <p>Mutant tanks are very rare because they are the type of tank that did not exist before, and new mutant tanks are continuously added over time</p>
+          </div>
+          <img src="./img/Mutation.jpg" alt="" data-scroll="toggle(.fromRightIn, .fromRightOut)" />
+        </div>
+
+        <div>
+          <img src="./img/Parts.jpg" alt="" data-scroll="toggle(.fromLeftIn, .fromLeftOut)" />
+          <div class="textarea textarea_right" data-scroll="toggle(.fromRightIn, .fromRightOut)">
+            <h4>Parts</h4>
+            <p class="marginB_10">
+              There are slots for parts in each tank.<br />
+              Parts are items that can increase the tank's stats, and parts can be purchased with game points.
+            </p>
+            <p>It is not possible to purchase individual parts, but you can recreate them by paying game points until you get the parts you want</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Play_Mode" class="section7">
+      <div class="content">
+        <h2 data-scroll="toggle(.scaleDownIn, .scaleDownOut)">Play Mode</h2>
+
+        <ul class="textarea_wrap">
+          <li id="pvp" data-scroll="toggle(.fromLeftIn, .fromLeftOut)">
+            <div class="imgarea"></div>
+            <div class="textarea">
+              <h4>PvP Mode</h4>
+              <p class="marginB_10">In PvP mode, multiple players choose their tanks and engage in battle.</p>
+              <p>
+                At the beginning of the PvP game, each player is placed in a random location and the mission is to destroy all enemy tanks. Players' ranking is determined only by the results of PvP
+              </p>
+            </div>
+          </li>
+
+          <li id="pve" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+            <div class="imgarea"></div>
+            <div class="textarea">
+              <h4>PvE Mode</h4>
+              <p>In PvE mode, a player battles AI bots in each stage, gets rewards if all AI bots are destroyed, and opens new stages by clearing each stage</p>
+            </div>
+          </li>
+
+          <li id="deathmatch" data-scroll="toggle(.fromRightIn, .fromRightOut)">
+            <div class="imgarea"></div>
+            <div class="textarea">
+              <h4>Deathmatch Mode</h4>
+              <p class="marginB_10">Deathmatch mode is currently in a conceptual stage.</p>
+              <p>Deathmatch mode is under development for the purpose of giving much more rewards for winning, but also losing NFTs if players lose</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- <section id="roadmap" class="section8">
+      <div class="content">
+        <h1 data-scroll="toggle(.scaleDownIn, .scaleDownOut)" >Roadmap</h1>
+        <ol class="complete">
+          <li data-scroll="toggle(.scaleDownIn, .scaleDownOut4)">
+            <span >Genesis</span>
+          </li>
+          <li data-scroll="toggle(.scaleDownIn, .scaleDownOut4)">
+            <span >Free Mint</span>
+          </li>
+          <li data-scroll="toggle(.scaleDownIn, .scaleDownOut4)">
+            <span >Marketing Channel Open</span>
+          </li>
+          <li data-scroll="toggle(.scaleDownIn, .scaleDownOut4)">
+            <span >NFT Staking Open</span>
+          </li>
+          <li data-scroll="toggle(.scaleDownIn, .scaleDownOut4)">
+            <span >ERC-20 LEEDO token Launch</span>
+          </li>
+          <li data-scroll="toggle(.scaleDownIn, .scaleDownOut4)">
+            <span >Polygon Integration</span>
+          </li>
+          <li data-scroll="toggle(.scaleDownIn, .scaleDownOut4)">
+            <span >DAO Contract Release</span>
+          </li>
+          <li data-scroll="toggle(.scaleDownIn, .scaleDownOut4)">
+            <span >LEEDO Page Renewal</span>
+          </li>
+        </ol>
+        <ol>
+          <li data-scroll="toggle(.scaleDownIn, .scaleDownOut4)" >LEEDO Guild Page Open</li>
+          <li data-scroll="toggle(.scaleDownIn, .scaleDownOut4)" >LEEDO Market Open</li>
+          <li data-scroll="toggle(.scaleDownIn, .scaleDownOut4)" >LEEDO NFT Breeding Open</li>
+          <li data-scroll="toggle(.scaleDownIn, .scaleDownOut4)" >LEEDO NFT Lending Open</li>
+          <li data-scroll="toggle(.scaleDownIn, .scaleDownOut4)" >LEEDO Game Launch</li>
+        </ol>
+      </div>
+      <div class="custom-shape-divider-bottom-1642947586">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="content">
+        <h1 data-scroll="toggle(.scaleDownIn, .scaleDownOut)" >FAQ</h1>
+        <div id="Accordion_wrap">
+          <div>
+            <div class="que">
+              <span >How to Add Matic Polygon Mainnet to Metamask Wallet</span>
+            </div>
+            <div class="anw">
+              <span>
+                <ol>
+                  <li>
+                    <p >1. To add Polygon Mainnet, click 'Select Network' on the dropdown menu and then click 'Custom RPC'</p>
+                    <p><img src="img/matic_rpc_add_1.png" alt="" /><img src="img/matic_rpc_add_2.png" alt="" /></p>
+                  </li>
+                  <li>
+                    <p >
+                      2. Matic Polygon Mainnet Network Information <br />
+                      <span
+                        >Network Name : Matic Polygon Mainnet<br />
+                        New RPC URL : https://polygon-rpc.com/<br />
+                        Chain ID : 137<br />
+                        Currency Symbol : MATIC<br />
+                        Block Explorer URL : https://polygonscan.com/</span
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p >3. When you have added the information, click 'Save'. You are now able to switch directly to Polygon Mainnet from the network dropdown menu.</p>
+                  </li>
+                </ol>
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <div class="que">
+              <span >What is a Leedo NFT Card?</span>
+            </div>
+            <div class="anw">
+              <span >The Leedo NFT Card is an invitation card to check-in to Leedo World. LEEDO Tokens are rewarded for using various utilities in LEEDO World.</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="que">
+              <span >How can I get a Leedo NFT card?</span>
+            </div>
+            <div class="anw">
+              <span >It can be obtained by purchasing it on the Opensea Marketplace.</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="que">
+              <span >I bought a Leedo NFT card, where can I see it?</span>
+            </div>
+            <div class="anw">
+              <span >Leedo NFT Cards are listed on the Opensea Marketplace, so you can view them in your Opeansea account's profile</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="que">
+              <span >Where is the Leedo NFT card used? </span>
+            </div>
+            <div class="anw">
+              <span>You can receive a reward when you check-in to Leedo World, and it is also used as a unique ID such as a SSN within Leedo World. When the game is released in Leedo World, it may be converted and used as a game character or item.</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="que">
+              <span >Can I create a game or community with Leedo NFT cards?</span>
+            </div>
+            <div class="anw">
+              <span>Of course. Anyone can create a game or community using the unique properties of each Leedo NFT card. If you need a specific environment when creating a game or community, you can join the Discord channel and ask the DAO.</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="que">
+              <span >How is the value of the Leedo NFT card determined?</span>
+            </div>
+            <div class="anw">
+              <span >The value of the Leedo NFT card is not inherent, but is given by games, communities, or services created in Leedo World.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- <section id="" class="section9">
+    </section> -->
+
+    <section id="Team" class="section10">
+      <div class="content">
+        <h2 data-scroll="toggle(.scaleDownIn, .scaleDownOut)">Team</h2>
+
+        <ul class="textarea_wrap">
+          <li id="atomrigsLab" data-scroll="toggle(.fromLeftIn, .fromLeftOut)">
+            <div class="imgarea"><img src="./img/logo-AtomrigsLab.png" alt="" /></div>
+            <div class="textarea">
+              <h4>Development & Operation</h4>
+              <p>
+                Atomrigs Lab is a blockchain tech company<br />
+                with many years of experience<br />
+                in developing blockchain based services
+              </p>
+            </div>
+          </li>
+
+          <!-- <li id="ccr" data-scroll="toggle(.fromRightIn, .fromRightOut)">
+            <div class="imgarea">CCR</div>
+            <div class="textarea">
+              <h4>Game Development</h4>
+              <p>
+                ...
+              </p>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+    </section>
+
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script src="./js/jquery.malihu.PageScroll2id.js"></script>
+    <script src="./js/jquery-syaku.rolling.js"></script>
+  </body>
+</html>
