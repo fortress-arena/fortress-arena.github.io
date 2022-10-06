@@ -781,6 +781,9 @@ nav ol li a {
 .section10  .content .textarea_wrap li{
   flex: 1;
 }
+.section10  .content .textarea_wrap a{
+  color:var(--black);
+}
 .section10  .content .imgarea{
   height:92px;
   margin-bottom: 30px;
@@ -1160,6 +1163,9 @@ nav ol li a {
   }
   .section10  .content .textarea_wrap li{
     margin-bottom: 40px;
+  }
+  .section10  .content .textarea_wrap a{
+    color:var(--black);
   }
   .section10  .content .imgarea{
     width:100%;
