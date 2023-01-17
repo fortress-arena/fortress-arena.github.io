@@ -773,7 +773,7 @@ nav ol li a {
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
-  /* width:90%; */
+  width:90%;
   max-width:1200px;
   margin-top: 40px;
   color:var(--black);
