@@ -1178,3 +1178,8 @@ nav ol li a {
     width:100%;
   }
 }
+
+/* Oauth 동의화면 인증을 위한 임시 CSS 삽입*/
+#privacytest:hover{
+  color: deeppink;
+}
