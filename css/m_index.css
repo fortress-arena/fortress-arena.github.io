@@ -75,6 +75,278 @@
     margin-bottom: 10px;
   }
 
+
+#banner_image {
+  width: 400px;
+}
+
+.banner_content {
+  position: absolute;
+  left: 35%;
+  top: 165px;
+}
+
+.hello {
+  height: 100px;
+}
+
+.logos {
+  height: 300px;
+}
+
+.discord {
+  height: 150px;
+}
+
+.join_discord {
+  z-index: 12;
+  position: absolute;
+}
+
+
+.glow-on-hover {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000A05;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+@media screen and (max-width: 3000px) {
+  .banner_content {
+    left: 34%;
+  }
+}
+
+@media screen and (max-width: 2500px) {
+  .banner_content {
+    left: 30%;
+  }
+}
+
+@media screen and (max-width: 2150px) {
+  .banner_content {
+    left: 28%;
+  }
+}
+
+@media screen and (max-width: 1950px) {
+  .banner_content {
+    left: 26%;
+  }
+}
+
+@media screen and (max-width: 1780px) {
+  .banner_content {
+    left: 22%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .banner_content {
+    left: 21%;
+    top: 140px
+  }
+  #banner_image {
+    width: 325px;
+  }
+  .hello {
+    height: 80px;
+  }
+  .logos {
+    height: 250px;
+  }
+  .discord {
+    height: 132px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .banner_content {
+    left: 22%;
+    top: 110px;
+    margin-top: 295px;
+  }
+  #banner_image {
+    width: 270px;
+  }
+  .hello {
+    height: 55px;
+  }
+  .logos {
+    height: 185px;
+  }
+  .discord {
+    height: 110px;
+  }
+}
+
+@media screen and (max-width: 901px) {
+  .banner_content {
+    left: 12%;
+    top: 110px;
+    margin-top: 244px;
+  }
+  #banner_image {
+    width: 270px;
+  }
+  .hello {
+    height: 55px;
+  }
+  .logos {
+    height: 185px;
+  }
+  .discord {
+    height: 110px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .banner_content {
+    left: 13%;
+    top: 110px;
+    margin-top: 237px;
+  }
+  #banner_image {
+    width: 230px;
+  }
+  .hello {
+    height: 43px;
+  }
+  .logos {
+    height: 173px;
+  }
+  .discord {
+    height: 95px;
+  }
+}
+
+@media screen and (max-width: 688px) {
+  .banner_content {
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .banner_content {
+    left: 25%;
+    top: 110px;
+    margin-top: 95px;
+  }
+  #banner_image {
+    width: 120px;
+  }
+  .hello {
+    height: 25px;
+  }
+  .logos {
+    height: 80px;
+  }
+  .discord {
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .banner_content {
+    left: 20%;
+    top: 110px;
+    margin-top: 95px;
+  }
+  #banner_image {
+    width: 120px;
+  }
+  .hello {
+    height: 25px;
+  }
+  .logos {
+    height: 80px;
+  }
+  .discord {
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner_content {
+    left: 17%;
+    top: 110px;
+    margin-top: 95px;
+  }
+  #banner_image {
+    width: 120px;
+  }
+  .hello {
+    height: 25px;
+  }
+  .logos {
+    height: 80px;
+  }
+  .discord {
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .banner_content {
+    left: 12%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .banner_content {
+    left: 6%;
+  }
+}
+
   /* home */
   #home .content {
     flex-direction: column;
@@ -84,6 +356,48 @@
     width:100%;
     max-width: 500px;
   }
+
+  #home #game_movie video{
+    /* border-radius: 10px; */
+    overflow: hidden;
+    height: 642px;
+    border: solid 1px white;
+  }
+  
+  @media screen and (max-width: 1500px) {
+    #home #game_movie video{
+        height: 502px;
+    }
+  }
+  
+  @media screen and (max-width: 1150px) {
+    #home #game_movie video{
+        height: 400px;
+        margin-top: 250px;
+    }
+  }
+  
+  @media screen and (max-width: 760px) {
+    #home #game_movie video{
+        margin-top: 250px;
+        height: 350px;
+    }
+  }
+  
+  @media screen and (max-width: 660px) {
+    #home #game_movie video{
+        margin-top: 250px;
+        height: 250px;
+    }
+  }
+  
+  @media screen and (max-width: 660px) {
+    #home #game_movie video{
+        margin-top: 120px;
+        height: 193px;
+    }
+  }
+
   #home .textarea{
     width:100%;
     margin-left: 0;
