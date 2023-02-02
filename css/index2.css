@@ -121,6 +121,14 @@ nav ol li a {
   position: relative;
   overflow: hidden;
 }
+
+.banner_content {
+  position: absolute;
+  left: 32vw; 
+  top: 14vh; 
+  width: 410px;
+}
+
 #home #game_movie{
   width:100%;
   height:0;
