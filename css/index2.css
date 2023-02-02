@@ -261,7 +261,7 @@ nav ol li a {
   content: '';
   position: absolute;
   left:0; right:0; top:0; bottom:0;
-  background-image: url(../img/bg_Tank_NFT.png);
+  background-image: url(../img/bg_Tank_NFT.webp);
   background-position: center;
   background-size: cover;
   opacity: 0.6;
@@ -507,7 +507,7 @@ nav ol li a {
   content: '';
   position: absolute;
   left:0; right:0; top:0; bottom:0;
-  background-image: url(../img/bg_Play_Mode.png);
+  background-image: url(../img/bg_Play_Mode.webp);
   background-position: center;
   background-size: cover;
   opacity: 0.6;
