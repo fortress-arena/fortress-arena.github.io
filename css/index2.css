@@ -717,9 +717,6 @@ nav ol li a {
   font-weight: bold;
 }
 
-
-
-
 @media screen and (max-width: 900px) {
   body {
     min-width: 320px;
