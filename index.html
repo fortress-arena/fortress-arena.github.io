@@ -50,7 +50,7 @@
     <script type="text/javascript">
       $(document).ready(function () {
         $("#header").load("./page/header.html");
-        //$("#sidebar").load("./page/sidebar.html");
+        $("#sidebar").load("./page/sidebar.html");
       });
     </script>
 
@@ -80,7 +80,7 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- <aside id="sidebar" class="sidebar"></aside> -->
+    <aside id="sidebar" class="sidebar"></aside>
 
     <header id="header"></header>
 
@@ -95,29 +95,18 @@
         <li><a href="#Team">Team</a></li>
       </ol>
     </nav>
-<!-- 
-    <div style="position:fixed; width: 125px; height: 33px; background-color:white; bottom: 10px; right: 10px; z-index: 10;">
-      Discord >>
-    </div> -->
+
+    <div id="fixedLink" style="position: fixed; bottom: 30px; right: 30px; z-index: 20;">
+      <a href="https://discord.gg/FnZyb4aasT" target="_blank" title="join_discord">
+        <img src="./img/discord.png" alt="discord-link" />
+      </a>
+    </div>
 
     <section id="home" class="section1">
       <div class="content">
-        <div class="banner_content">
-          <div>
-            <img id="banner_image" class="hello" src="./img/hello.png">
-          </div>
-          <div>
-            <img id="banner_image" class="logos" src="./img/logos.png">
-          </div>
-          <div>
-            <a href="https://discord.gg/FnZyb4aasT" class="join_discord glow-on-hover" title="join_discord">
-              <img id="banner_image" class="discord" src="./img/discord.png">
-            </a>
-          </div>
-        </div>
         <div id="game_movie">
           <video autoplay loop muted>
-            <source src="./img/polygon_intro.mp4" type="video/mp4" />
+            <source src="./img/intro.mp4" type="video/mp4" />
             <img src="./img/intro.jpg" alt="" />
           </video>
         </div>
