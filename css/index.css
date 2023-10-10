@@ -446,6 +446,7 @@ nav ol li a {
   width: 230px;
   height: 36px;
   padding: 8px 16px;
+  box-shadow: 2px 2px;
   justify-content: center;
   align-items: center;
   gap: 8px;
@@ -492,6 +493,7 @@ nav ol li a {
   width: 230px;
   height: 36px;
   padding: 8px 16px;
+  box-shadow: 2px 2px;
   margin: auto;
   justify-content: center;
   align-items: center;
