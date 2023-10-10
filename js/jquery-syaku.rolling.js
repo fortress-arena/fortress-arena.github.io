@@ -1,28 +1,28 @@
 
-(function($) {
+(function ($) {
 
-  $.fn.srolling = function(settings) {
+  $.fn.srolling = function (settings) {
 
     settings = jQuery.extend({
-      data : [ ],
-      name : '#srolling_area',
-      item_count : 1,
-      cache_count : 10,
-      width : 100,
-      height : 100,
-      auto : false,
-      delay : 1000,
-      delay_frame : 500, 
-      move : 'left',
-      prev : '#srolling_prev',
-      next : '#srolling_next'
+      data: [],
+      name: '#srolling_area',
+      item_count: 1,
+      cache_count: 10,
+      width: 100,
+      height: 100,
+      auto: false,
+      delay: 1000,
+      delay_frame: 500,
+      move: 'left',
+      prev: '#srolling_prev',
+      next: '#srolling_next'
     }, settings);
 
     var name = settings.name;
     var auto = settings.auto;
     var auto_go = auto;
     var delay = settings.delay;
-    var delay_time = delay *2;
+    var delay_time = delay * 2;
     var delay_frame = settings.delay_frame
     var move = settings.move;
     var prev = settings.prev;
@@ -39,22 +39,22 @@
     var prev_idx = item_total;
     var next_idx = 0;
 
-    var start_left = item_width *-2;
+    var start_left = item_width * -2;
 
     var w_full_size = (parseInt(item_width) * parseInt(item_total)) * 10;
 
     switch (move) {
-      case 'down' :
-      case 'top' :
+      case 'down':
+      case 'top':
         w_full_size = item_width;
-        start_left = item_height * (cache_count *-1);
-      break;
+        start_left = item_height * (cache_count * -1);
+        break;
     }
 
     var box = this;
-    var box_area = box.append("<div id='srolling_area' style='width:" + w_full_size + "px;position: absolute;white-space:nowrap;'></div>");
-    box_area = jQuery(name,box);
-    var item_area = jQuery("<div></div>").css("width",item_width).css("height",item_height).css("float","left").css("overflow","hidden");
+    var box_area = box.append("<div id='srolling_area' style='width: 100%" + "px;position: absolute;white-space:nowrap;'></div>");
+    box_area = jQuery(name, box);
+    var item_area = jQuery("<div></div>").css("width", item_width).css("height", item_height).css("float", "left").css("overflow", "hidden");
 
     var sTime = null;
     var sTime2 = null;
@@ -63,22 +63,22 @@
       _items();
       if (auto) { _play(); }
 
-      jQuery(prev).click(function() {
+      jQuery(prev).click(function () {
         _prev_act();
       });
 
-      jQuery(next).click(function() {
+      jQuery(next).click(function () {
         _next_act();
       });
 
-      jQuery(box_area).mouseover(function() {
+      jQuery(box_area).mouseover(function () {
         if (auto) {
           clearTimeout(sTime);
           auto_go = false;
         }
       });
 
-      jQuery(box_area).mouseout(function() {
+      jQuery(box_area).mouseout(function () {
         if (auto) {
           auto_go = true;
           _play();
@@ -86,10 +86,10 @@
       });
 
       // html5 & jquerymobile
-      box_area.bind('swipeleft', function(event) {
+      box_area.bind('swipeleft', function (event) {
         _next_act();
       });
-      box_area.bind('swiperight', function(event) {
+      box_area.bind('swiperight', function (event) {
         _prev_act();
       });
 
@@ -97,33 +97,33 @@
 
     function _start_box() {
       switch (move) {
-        case 'down' :
-        case 'top' : box_area.css('top',start_left); break;
-        case 'right' :
-        case 'left' : box_area.css('left',start_left); break;
+        case 'down':
+        case 'top': box_area.css('top', start_left); break;
+        case 'right':
+        case 'left': box_area.css('left', start_left); break;
       }
     }
 
     function _play() {
       switch (move) {
-        case 'down' :
-        case 'right' : sTime = setTimeout(_prev_auto_act,delay_time); break;
-        case 'top' :
-        case 'left' : sTime = setTimeout(_next_auto_act,delay_time); break;
+        case 'down':
+        case 'right': sTime = setTimeout(_prev_auto_act, delay_time); break;
+        case 'top':
+        case 'left': sTime = setTimeout(_next_auto_act, delay_time); break;
       }
     }
 
     function _prev_auto_act() {
       if (auto && auto_go) {
         _prev_act();
-        sTime = setTimeout(_prev_auto_act,delay_time);
+        sTime = setTimeout(_prev_auto_act, delay_time);
       }
     }
 
     function _next_auto_act() {
       if (auto && auto_go) {
         _next_act();
-        sTime =setTimeout(_next_auto_act,delay_time);
+        sTime = setTimeout(_next_auto_act, delay_time);
       }
     }
 
@@ -135,12 +135,12 @@
       next_obj.unbind('click');
 
       switch (move) {
-        case 'left' :
-        case 'right' :
+        case 'left':
+        case 'right':
 
           box_area.animate({
             left: '+=' + (item_width * item_count)
-          }, delay_frame, function() {
+          }, delay_frame, function () {
             for (var i = 0; i < item_count; i++) { box_area.children().last().remove(); }
             _create_prev();
             _start_box();
@@ -150,14 +150,14 @@
 
           });
 
-        break;
-        case 'top' :
-        case 'down' :
+          break;
+        case 'top':
+        case 'down':
 
 
           box_area.animate({
             top: '+=' + (item_height * item_count)
-          }, delay_frame, function() {
+          }, delay_frame, function () {
             for (var i = 0; i < item_count; i++) { box_area.children().last().remove(); }
             _create_prev();
             _start_box();
@@ -165,7 +165,7 @@
             next_obj.click(_next_act);
           });
 
-        break;
+          break;
       }
 
     }
@@ -178,12 +178,12 @@
       next_obj.unbind('click');
 
       switch (move) {
-        case 'down' :
-        case 'top' :
+        case 'down':
+        case 'top':
 
           box_area.animate({
             top: '-=' + (item_height * item_count)
-          }, delay_frame, function() {
+          }, delay_frame, function () {
             for (var i = 0; i < item_count; i++) { box_area.children().first().remove(); }
             _create_next();
             _start_box();
@@ -191,14 +191,14 @@
             next_obj.click(_next_act);
           });
 
-        break;
+          break;
 
-        case 'right' :
-        case 'left' :
+        case 'right':
+        case 'left':
 
           box_area.animate({
             left: '-=' + (item_width * item_count)
-          }, delay_frame, function() {
+          }, delay_frame, function () {
             for (var i = 0; i < item_count; i++) { box_area.children().first().remove(); }
             _create_next();
             _start_box();
@@ -206,7 +206,7 @@
             prev_obj.click(_prev_act);
           });
 
-        break;
+          break;
       }
 
     }
@@ -215,16 +215,16 @@
       _start_box();
 
       for (var i = cache_count; i > 0; i--) {
-        if (item_total <= prev_idx || prev_idx < 0) { prev_idx = item_total-1; }
+        if (item_total <= prev_idx || prev_idx < 0) { prev_idx = item_total - 1; }
         var t_obj = item_area.clone();
-        box_area.prepend( t_obj.append(jQuery(data[prev_idx])).attr('class','srolling_item_' + prev_idx) );
+        box_area.prepend(t_obj.append(jQuery(data[prev_idx])).attr('class', 'srolling_item_' + prev_idx));
         prev_idx--;
       }
 
-      for (var i=0; i < cache_count; i++) {
+      for (var i = 0; i < cache_count; i++) {
         if (item_total <= next_idx || next_idx < 0) { next_idx = 0; }
         var t_obj = item_area.clone();
-        box_area.append( t_obj.append(jQuery(data[next_idx])).attr('class','srolling_item_' + next_idx) );
+        box_area.append(t_obj.append(jQuery(data[next_idx])).attr('class', 'srolling_item_' + next_idx));
         next_idx++;
       }
 
@@ -232,26 +232,26 @@
 
     function _create_prev() {
       var p_obj = box_area.children().first().attr('class');
-      prev_idx = parseInt(p_obj.replace('srolling_item_','')) - 1;
+      prev_idx = parseInt(p_obj.replace('srolling_item_', '')) - 1;
 
       for (var i = item_count; i > 0; i--) {
-        if (item_total <= prev_idx || prev_idx < 0) { prev_idx = (item_total-1); }
+        if (item_total <= prev_idx || prev_idx < 0) { prev_idx = (item_total - 1); }
 
         var t_obj = item_area.clone();
-        box_area.prepend( t_obj.append(jQuery(data[prev_idx])).attr('class','srolling_item_' + prev_idx) );
+        box_area.prepend(t_obj.append(jQuery(data[prev_idx])).attr('class', 'srolling_item_' + prev_idx));
         prev_idx--;
       }
     }
 
     function _create_next() {
       var n_obj = box_area.children().last().attr('class');
-      next_idx = parseInt(n_obj.replace('srolling_item_','')) + 1;
+      next_idx = parseInt(n_obj.replace('srolling_item_', '')) + 1;
 
-      for (var i=0; i < item_count; i++) {
+      for (var i = 0; i < item_count; i++) {
         if (item_total <= next_idx || next_idx < 0) { next_idx = 0; }
 
         var t_obj = item_area.clone();
-        box_area.append( t_obj.append(jQuery(data[next_idx])).attr('class','srolling_item_' + next_idx) );
+        box_area.append(t_obj.append(jQuery(data[next_idx])).attr('class', 'srolling_item_' + next_idx));
         next_idx++;
       }
     }
